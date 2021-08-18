@@ -13,19 +13,11 @@ module.exports = (sequelize) => {
             type:DataTypes.INTEGER,
         },
         duration:{
-            type:DataTypes.DATE,
+            type:DataTypes.STRING,
         },
         station:{
             type:DataTypes.ENUM('summer', 'autumn', 'winter', 'spring'),
         },
-        id_country:{
-            type:DataTypes.STRING,
-            unique:"idCompuesto"
-            // references: {
-            //     model: Country,
-            //     key: "code",
-            // }
-        }
     },{
         timestamps: false,
       }
