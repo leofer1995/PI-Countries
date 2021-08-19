@@ -5,9 +5,9 @@ const router = express.Router();
 const {Activity, Country} = require('../db');
 
 router.post('/',async(req,res)=>{
-    const data = req.body;
-    const numCountries = await Country.count()
     try{
+        const data = req.body;
+        const numCountries = await Country.count()
         if(!numCountries) await GetCountries()
         ActCount(data)
         res.send('Creacion correcta')
