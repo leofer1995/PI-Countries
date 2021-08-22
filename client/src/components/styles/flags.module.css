@@ -1,0 +1,19 @@
+.contenedorHome{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background-color: black;
+}
+
+.contenedorBanderas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+    justify-content: center;
+    background-color: black;
+    margin-top: 200px;
+}
+
+

@@ -1,10 +1,18 @@
-import './App.css';
-
+//import './App.css';
+import React from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Landing from './components/landing.jsx';
+import Flags from './components/flags.jsx';
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Countries</h1>
-    </div>
+    <Router>
+      <Route exact path="/">
+         <Landing />
+      </Route>
+      <Route exact path = '/home'>
+        <Flags />
+      </Route>
+    </Router>
   );
 }
 
