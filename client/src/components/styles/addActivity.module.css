@@ -1,0 +1,9 @@
+.contEtq{
+    display: flex;
+    align-items: flex-start;
+    width:450px; 
+    height:70px; 
+    flex-wrap: wrap; 
+    overflow-x: auto;
+    border: solid 1px black;
+}

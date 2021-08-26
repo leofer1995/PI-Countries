@@ -1,9 +1,10 @@
 
 
 const initialState = {
-    countries: [],
-    page: 1,
-    renderCountries:[]
+    countries: [],//todos los paises que tengo de respuesta de la api
+    resultCountries:[],//resultado de los filtros y busquedas
+    renderCountries:[],//los paises renderizados por pagina
+    page: 1,  
 }
 
 const rootReducer = (state = initialState, action)=>{
@@ -11,11 +12,12 @@ const rootReducer = (state = initialState, action)=>{
         return{
             ...state,
             countries:[...action.payload],
+            resultCountries:[...action.payload],
         }
     }
 
     if(action.type==="GET_RENDER"){//se ejecuta la primera vez y cada vez que altualizo el estado page
-        const render = state.countries.slice((state.page-1)*10,(state.page-1)*10+10)
+        const render = state.resultCountries.slice((state.page-1)*10,(state.page-1)*10+10)
         return {
             ...state,
             renderCountries:render
@@ -28,42 +30,44 @@ const rootReducer = (state = initialState, action)=>{
     }
     
     if(action.type==="FOLLOWING_PAGE"){//actualiza es state page
-        if(state.page === 25) return {...state,page: state.page}
+        const finalPage = Math.ceil(state.resultCountries.length/10)
+        if(state.page === finalPage) return {...state,page: state.page}
         return {...state,page: state.page + 1,}
     }
 
     if(action.type==="SEARCH_COUNTRY"){//busca y renderiza el pais
         action.payload=action.payload.toLowerCase()
         const large = action.payload.length
-        console.log(large)
-        const country = state.countries.filter((coun)=> coun.name.substr(0,large)===action.payload)
+        const country = state.resultCountries.filter((coun)=> coun.name.substr(0,large)===action.payload)
         return {
             ...state, 
-            renderCountries:country
+            page:1,
+            resultCountries:country,
+            renderCountries:country.slice(0,10)  
         }
     }
 
     if(action.type === "ORDER_COUNTRIES"){
         if(action.payload === 'asd'){
-            const order = state.countries.sort(function(a,b){return a.population - b.population})
+            const order = state.resultCountries.sort(function(a,b){return a.population - b.population})
             const render = order.slice(0,10)
             return {...state,
             page: 1,
-            countries:order,
+            resultCountries:order,
             renderCountries:render,
             }
         }
         if(action.payload === 'des'){
-            const order = state.countries.sort(function(a,b){return b.population - a.population})
+            const order = state.resultCountries.sort(function(a,b){return b.population - a.population})
             const render = order.slice(0,10)
             return {...state,
             page: 1,
-            countries:order,
+            resultCountries:order,
             renderCountries:render,
             }
         }
         if(action.payload === 'az'){
-            const order = state.countries.sort(function(a,b){
+            const order = state.resultCountries.sort(function(a,b){
                 if(a.name<b.name)return -1;
                 else if(a.name > b.name) return 1;
                 else return 0
@@ -71,12 +75,12 @@ const rootReducer = (state = initialState, action)=>{
             const render = order.slice(0,10)
             return {...state,
             page: 1,
-            countries:order,
+            resultCountries:order,
             renderCountries:render,
             }
         }
         if(action.payload === 'za'){
-            const order = state.countries.sort(function(a,b){
+            const order = state.resultCountries.sort(function(a,b){
                 if(a.name<b.name)return 1;
                 else if(a.name > b.name) return -1;
                 else return 0
@@ -84,9 +88,20 @@ const rootReducer = (state = initialState, action)=>{
             const render = order.slice(0,10)
             return {...state,
             page: 1,
-            countries:order,
+            resultCountries:order,
             renderCountries:render,
             }
+        }
+    }
+
+    if(action.type==="FILTER_COUNTRIES"){
+        const filter = state.countries.filter(country=>country.continent === action.payload);
+        const render = filter.slice(0,10)
+        return {
+            ...state,
+            page:1,
+            resultCountries:filter,
+            renderCountries:render,
         }
     }
     return state

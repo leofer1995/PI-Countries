@@ -28,3 +28,8 @@ export const searchCountry = (country)=>{
 export const ordering = (condition) => {
     return {type:"ORDER_COUNTRIES", payload:condition}
 }
+
+export const filters = (condition) =>{
+    console.log(condition)
+    return {type:"FILTER_COUNTRIES", payload:condition}
+} 

@@ -8,7 +8,9 @@ const NavigationBar = ()=>{
             <Link to='/home'>
                 <span className={styles.home}>Home</span>
             </Link>
-            <span className={styles.activity}>Add Activity</span>
+            <Link to='/AddActivity'>
+                <span className={styles.activity}>Add Activity</span>
+            </Link>
         </div>
     )
 }
