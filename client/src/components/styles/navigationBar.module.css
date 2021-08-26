@@ -1,0 +1,20 @@
+.contenedor{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 8%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to right, #2A235A, #2D65A9);
+    border-bottom: 1px solid white;
+}
+
+.activity{
+    margin-right: 15px;
+    color: white;
+}
+
+.home{
+    margin-left: 15px;
+    color:white;
+    direction: none;
+}

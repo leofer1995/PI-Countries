@@ -1,28 +1,32 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'; 
-import { getCountries } from '../actions';
+import { getCountries, getRender } from '../actions';
 import Flag from './flag';
-import Pagination from './pagination';
 import styles from './styles/flags.module.css'
 
-const Flags = ({paises, getPaises})=>{
-    console.log(paises)
+const Flags = ({paises, getPaises, getRenderPaises, numPaises})=>{
     useEffect(()=>{
-        getPaises()
-    },[])
+        async function getCount(){
+            await getPaises();
+        }
+            getCount().then(()=>getRenderPaises())
+            //getRenderPaises();
+    },[getRenderPaises, getPaises])
     return (
     <div className={styles.contenedorHome}>
+        {/* <Controller /> */}
         <div className={styles.contenedorBanderas}>
             {paises.map(
-                (pais, i)=>(
+                (pais)=>(
                     <Flag 
+                        key = {pais.code}
                         flag={pais.flag}
                         name={pais.name}
                         continent={pais.continent}
                     />
             ))}
         </div>
-        <Pagination />
+        {/* <Pagination /> */}
     </div>
     )
 
@@ -30,13 +34,15 @@ const Flags = ({paises, getPaises})=>{
 
 function mapDispatchToProps(dispatch){
     return {
-        getPaises: ()=> dispatch(getCountries()),        
+        getPaises: ()=> dispatch(getCountries()),  
+        getRenderPaises: ()=>dispatch(getRender()),      
     }
 };
 
 function mapStateToProps(state){
     return{
-        paises: state.countries, 
+        paises: state.renderCountries, 
+        numPaises :state.countries
     }
 }
 

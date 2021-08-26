@@ -5,7 +5,7 @@
     width: 230px;
     height: 144px;
     margin:10px;
-    border:#0AD0D1 solid 0px;
+    border:black solid 1px;
     /* //align-items: center; */
     justify-content: center;
     border-radius: 20px;
@@ -13,7 +13,7 @@
     
 }
 .contenedorBandera:hover{
-    box-shadow:  5px 5px 5px  #2A235A;
+    box-shadow:  5px 5px 5px  black;
     position: relative;
     width: 250px;
     height: 150px;
@@ -34,7 +34,7 @@
     width: 55%;
     height: 100%;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(3, 3, 3, 0.5);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     animation: identifier 1s;
     animation-timing-function: linear;
@@ -51,7 +51,7 @@
     position: absolute; 
     font-size: 14px;
     text-align: center;
-    color:#2D65A9;
+    color:white;
 }
 /* 
 .name{

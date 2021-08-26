@@ -1,0 +1,47 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    justify-content: center;
+    height: 90px;
+    border-bottom:1px solid black ;
+}
+
+.search {
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: none;
+    margin-left: 15px;
+
+}
+
+.btn{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: gray;
+    color: white;
+    margin-left: 2px;
+}
+
+.btn:hover{
+    border: 1px solid gray;
+    color:gray;
+    background-color: whitesmoke;
+}
+
+.filter {
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: none;
+    margin-left: 15px;
+    color: gray;
+}
+
+.order {
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: none;
+    margin-left: 15px;
+    color: gray;
+}
+

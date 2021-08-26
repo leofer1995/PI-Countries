@@ -10,7 +10,7 @@ const Flag = ({flag, name, continent}) => {
         //     <h4 className={styles.continent}>{continent}</h4>  
         // </div>
         <div className={styles.contenedorBandera}>
-            <img className={styles.img} src={flag}></img>
+            <img className={styles.img} src={flag} alt='bandera'></img>
             <div className={styles.contenedorInf}>
                 <h5 className={styles.name}>{name.toUpperCase()}<br></br> {continent}</h5> 
             </div>

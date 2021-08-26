@@ -1,16 +1,17 @@
 import React from "react";
 import { connect } from 'react-redux'; 
-import { getCountries, pageFollowing, pagePrevious } from "../actions";
+import { getRender, pageFollowing, pagePrevious } from "../actions";
 import styles from './styles/pagination.module.css'
+
 const Pagination = (props)=>{
     const previous = ()=>{
-        props.getPaises()
         props.prev()
+        props.getRenderPaises()  
     }
 
     const following = () =>{
-        props.getPaises()
         props.foll()
+        props.getRenderPaises()   
     }
 
     return (
@@ -26,8 +27,8 @@ function mapDispatchToProps(dispatch){
     return {
         prev:()=>dispatch(pagePrevious()),
         foll:()=>dispatch(pageFollowing()),
-        getPaises:()=>dispatch(getCountries())
-
+       // getPaises:()=>dispatch(getCountries()),
+        getRenderPaises: ()=>dispatch(getRender()),   
     }
 }
 

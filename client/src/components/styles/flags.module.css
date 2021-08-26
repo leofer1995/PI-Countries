@@ -4,7 +4,7 @@
     width: 100%;
     height: auto;
     justify-content: center;
-    background-color: black;
+    background-color: whitesmoke;
 }
 
 .contenedorBanderas{
@@ -12,8 +12,8 @@
     flex-direction: row;
     flex-wrap: wrap;   
     justify-content: center;
-    background-color: black;
-    margin-top: 200px;
+    /* background-color: white; */
+    margin-top: 20px;
 }
 
 

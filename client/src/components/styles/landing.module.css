@@ -27,7 +27,7 @@ html, body{
 
 .full{
     width: 100%;
-    height: 100%;
+    height: 95%;
     background:url('https://i.pinimg.com/originals/7a/5a/b6/7a5ab6c2d8d212abd35e9e244687743a.gif') no-repeat 50% 50%;
     background-size: cover;
     display: table;
@@ -54,7 +54,7 @@ html, body{
 .boton {
     border:#1B262C solid 2px;
     font-size: 45px;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 300px;
     color: #1B262C;
 }
