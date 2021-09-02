@@ -15,7 +15,7 @@ const Landing = ()=>{
         <section className={styles.full}>
             <div className={styles.fullinner}>
                 <div className={styles.content}>
-                    <h4>Siapp Countries</h4>
+                    <h4>Countries App</h4>
                     <Link to='/home' style={{ textDecoration: 'none' }}>
                         <div className={styles.boton} >¡Vamos!</div>
                     </Link>

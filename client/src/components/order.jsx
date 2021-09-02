@@ -7,6 +7,7 @@ const Order = ({ordenar})=>{
 
     const orderCountries = (e)=>{
         ordenar(e.target.value)
+        e.target.value = 'def'
     }
 
     return(

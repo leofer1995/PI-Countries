@@ -37,8 +37,7 @@
     background-color: rgba(3, 3, 3, 0.5);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     animation: identifier 1s;
-    animation-timing-function: linear;
-    
+    animation-timing-function: linear;   
 }
 
 /* @keyframes identifier {

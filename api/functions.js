@@ -23,16 +23,16 @@ const GetCountries = async()=>{
 const ActCount = async(data)=>{//RELACIONA LA TABLA INTERMEDIA
     try{
             let [instance, created] = await Activity.findOrCreate({
-                 where: {name:data.name},
+                 where: {name:data.activity},
                  defaults:{
                      difficulty:data.difficulty,
                      duration:data.duration,
-                     station:data.station,
+                     station:data.season,
                  }
              })
              if(created){
                 let activity = await Activity.findByPk(instance.toJSON().id)
-                await activity.addCountries(data.id_country)
+                await activity.addCountries(data.countries)
              }
     }catch(err){
         console.log(err)

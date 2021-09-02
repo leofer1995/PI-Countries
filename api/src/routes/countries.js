@@ -4,6 +4,7 @@ const axios = require('axios')
 const {Country, countryActivity, Activity, Op} = require('../db');
 const { GetCountries } = require('../../functions');
 
+
 router.get('/',async(req,res)=>{
     try{
         const {name} = req.query
@@ -28,6 +29,8 @@ router.get('/',async(req,res)=>{
     }
 });
 
+
+
 router.get('/:id',async(req, res)=>{
     try{
         const { id } = req.params;
@@ -49,6 +52,8 @@ router.get('/:id',async(req, res)=>{
     }catch(err){
         res.json(err)
     }
+
+
 
 })
 

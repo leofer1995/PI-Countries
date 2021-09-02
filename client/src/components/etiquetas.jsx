@@ -8,8 +8,8 @@ const Etiquetas = ({name, onClose})=>{
     // }
     return (
          <div className={styles.etq}>
-            <div className={styles.country}>{name}</div>
-            <div className={styles.x} onClick={()=>onClose(name)}>x</div>
+            <div className={styles.country}>{name.toUpperCase()}</div>
+            <div className={styles.x} onClick={()=>onClose(name)}></div>
         </div>
     )
 }

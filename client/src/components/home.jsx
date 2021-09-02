@@ -1,5 +1,5 @@
 import React from 'react';
-import Controller from './controller';
+// import Controller from './controller';
 import Flags from './flags';
 import Pagination from './pagination';
 
@@ -8,7 +8,7 @@ import Pagination from './pagination';
 const Home = () =>{
     return (
         <div>
-            <Controller />
+            {/* <Controller /> */}
             <Flags />
             <Pagination />
         </div>

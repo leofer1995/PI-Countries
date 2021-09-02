@@ -7,16 +7,19 @@ module.exports = (sequelize) => {
     sequelize.define('activity', {
         name:{
             type:DataTypes.STRING,
-            unique:"idCompuesto"
+            //unique:"idCompuesto",
+            set (value) {
+                this.setDataValue('name', value.toLowerCase());
+             }
         },
         difficulty:{
-            type:DataTypes.INTEGER,
+            type:DataTypes.STRING,
         },
         duration:{
             type:DataTypes.STRING,
         },
         station:{
-            type:DataTypes.ENUM('summer', 'autumn', 'winter', 'spring'),
+            type:DataTypes.ENUM('summer', 'autumn', 'winter', 'spring','all'),
         },
     },{
         timestamps: false,

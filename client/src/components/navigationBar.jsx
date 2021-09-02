@@ -6,10 +6,10 @@ const NavigationBar = ()=>{
     return(
         <div className={styles.contenedor}>
             <Link to='/home'>
-                <span className={styles.home}>Home</span>
+                <h2 className={styles.home}>Home</h2>
             </Link>
             <Link to='/AddActivity'>
-                <span className={styles.activity}>Add Activity</span>
+                <h3 className={styles.activity}>Add Activity</h3>
             </Link>
         </div>
     )

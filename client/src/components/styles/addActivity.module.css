@@ -1,9 +1,227 @@
+.contForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 92%;
+    color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contTit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 5px 10px #2D65A9;
+    height: 90px;
+}
+
+.contInputs{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items:center;
+}
+/* /////////////////////////////////activity//////////////////////////////////////////// */
+.contActivity{
+    display: flex;
+    margin:10px;
+    color: gray;
+    border: 1px solid #2D65A9;
+    width: 550px;
+    padding: 10px;
+    border-radius: 15px;
+    justify-content: center;
+}
+.inAct{
+    margin-left:5px;
+}
+.inAct input{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: none;
+    height: 20px;
+    color: gray;
+}
+.dangerAct{
+    display: flex;
+    margin:10px;
+    color: gray;
+    border: 1px solid red;
+    width: 550px;
+    padding: 10px;
+    border-radius: 15px;
+    justify-content: center; 
+    box-shadow:5px 2px 2px gray;
+}
+/* /////////////////////////////////Time//////////////////////////////////////////// */
+.contTime{
+    display: flex;
+    margin: 10px;
+    color: gray;
+    border: 1px solid #2D65A9;
+    width: 550px;
+    padding: 10px;
+    border-radius: 15px;
+    justify-content: center;
+}
+.contTimeDanger{
+    display: flex;
+    margin: 10px;
+    color: gray;
+    border: 1px solid red;
+    width: 550px;
+    padding: 10px;
+    border-radius: 15px;
+    justify-content: center;
+    box-shadow:5px 2px 2px gray;
+}
+.contTime input {
+    margin-left: 5px;
+    background: none;
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: gray;
+    text-align: center;
+}
+.contTimeDanger input {
+    margin-left: 5px;
+    background: none;
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: gray;
+    text-align: center;
+}
+.contTime select {
+    margin-left: 5px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: gray;
+    text-align: center;
+}
+.contTimeDanger select {
+    margin-left: 5px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: gray;
+    text-align: center;
+}
+.contTime option{
+    background: whitesmoke;
+}
+.contTimeDanger option{
+    background: whitesmoke;
+}
+/* /////////////////////////////////Difficulty//////////////////////////////////////////// */
+.contDiff{
+    display: flex;
+    margin: 10px;
+    border: solid 1px red;
+    border-radius: 15px;
+    padding: 10px;
+    color: gray;
+    width: 550px;
+    justify-content: center;
+    box-shadow:5px 2px 2px gray;
+}
+.easy{
+    display: flex;
+    margin: 10px;
+    border: solid 1px #2D65A9;
+    border-radius: 15px;
+    padding: 10px;
+    color: gray;
+    width: 550px;
+    justify-content: center;
+    box-shadow:2px 2px 12px #2D65A9;  
+}
+.medium{
+    display: flex;
+    margin: 10px;
+    border: solid 1px greenyellow;
+    border-radius: 15px;
+    padding: 10px;
+    color: gray;
+    width: 550px;
+    justify-content: center;
+    box-shadow:2px 2px 12px greenyellow;
+}
+.hard{
+    display: flex;
+    margin: 10px;
+    border: solid 1px orange;
+    border-radius: 15px;
+    padding: 10px;
+    color: gray;
+    width: 550px;
+    justify-content: center;
+    box-shadow:2px 2px 12px orange;
+}
+.contNiv{
+    display: flex;
+    /* //flex-direction: column; */
+}
+.contNiv input {
+    margin:0px 10px;
+}
+.contNiv label {
+    margin-left: -8px;
+}
+/* /////////////////////////////////Countries//////////////////////////////////////////// */
+.add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #2D65A9;
+    border-radius: 15px;
+    margin: 10px;
+    width: 550px;
+    padding: 10px;
+}
+.addDanger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px red;
+    border-radius: 15px;
+    margin: 10px;
+    width: 550px;
+    padding: 10px;  
+    box-shadow:5px 2px 2px gray;
+}
+.contCount{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    color: gray;
+    height: 25px;
+}
+.contCount select{
+    margin-left: 5px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: gray;
+    text-align: center;
+}
+.selCount{
+    width:200px;
+}
 .contEtq{
     display: flex;
     align-items: flex-start;
-    width:450px; 
-    height:70px; 
+    width:500px; 
+    height:60px; 
     flex-wrap: wrap; 
     overflow-x: auto;
-    border: solid 1px black;
+    border: solid 1px gray;
+    border-radius: 15px;
+    margin: 10px;
 }

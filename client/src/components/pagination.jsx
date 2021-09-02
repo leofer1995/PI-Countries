@@ -4,20 +4,25 @@ import { getRender, pageFollowing, pagePrevious } from "../actions";
 import styles from './styles/pagination.module.css'
 
 const Pagination = (props)=>{
-    const previous = ()=>{
-        props.prev()
+    const previous = (cond)=>{
+        props.prev(cond)
         props.getRenderPaises()  
     }
 
-    const following = () =>{
-        props.foll()
+    const following = (cond) =>{
+        props.foll(cond)
         props.getRenderPaises()   
     }
+    
 
     return (
         <div className={styles.contenedorPag}>
-            <button  className={styles.btn} onClick={previous}>Anterior</button>
-            <button className={styles.btn} onClick={following}>siguiente</button>
+            {props.page!==1?<button className={styles.fleL} onClick={()=>previous()}></button>:null}
+            {props.page >1 ? <button className={styles.btn} onClick={()=>previous(1)}>...</button>:null}
+            {<button  className={styles.actual}>{props.page}</button>}
+            {props.page < props.pages?<button className={styles.btn} onClick={()=>following()}>{props.page + 1}</button>:null}
+            {props.page<props.pages-1?<button className={styles.btn}  onClick={()=>following(props.pages-1)}>...</button>:null}
+            {props.page>=props.pages-1?null:<button className={styles.fleR} onClick={()=>following()}></button>}
         </div>
 
     )
@@ -25,11 +30,18 @@ const Pagination = (props)=>{
 
 function mapDispatchToProps(dispatch){
     return {
-        prev:()=>dispatch(pagePrevious()),
-        foll:()=>dispatch(pageFollowing()),
+        prev:(cond)=>dispatch(pagePrevious(cond)),
+        foll:(cond)=>dispatch(pageFollowing(cond)),
        // getPaises:()=>dispatch(getCountries()),
         getRenderPaises: ()=>dispatch(getRender()),   
     }
 }
 
-export default connect(null,mapDispatchToProps)(Pagination)
+function mapStateToProps(state){
+    return{
+        pages:state.pages,
+        page:state.page,
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Pagination)

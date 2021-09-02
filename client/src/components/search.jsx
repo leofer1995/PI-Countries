@@ -8,10 +8,14 @@ const Search = (props)=>{
     const changeInput=(e)=>{
         setCountry(e.target.value)
     }
+    const search= (country)=>{
+        setCountry('')
+        props.pais(country)
+    }
     return (
     <div>
         <input value={country} placeholder='Search Country' className={styles.search} onChange={changeInput}></input>
-        <button className={styles.btn} onClick={()=>props.pais(country)}>Search</button>
+        <button className={styles.btn} onClick={()=>search(country)}>Search</button>
     </div>
     )
 }

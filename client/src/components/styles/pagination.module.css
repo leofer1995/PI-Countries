@@ -1,18 +1,48 @@
 .contenedorPag{
     display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+.actual{
     margin-top: 35px;
     margin-bottom: 33px;
-    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: gray;
+    color: white;
+    margin-left: 2px;
 }
-
+.fleL{
+    margin-top: 35px;
+    margin-bottom: 33px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    transform: scaleX(-1);
+    background: url('./flecha-correcta.png');
+    background-size: cover;
+    color: gray;
+    margin-left: 2px;
+}
+.fleR{
+    margin-top: 35px;
+    margin-bottom: 33px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: url('./flecha-correcta.png');
+    background-size: cover;
+    color: gray;
+    margin-left: 2px;
+}
 .btn{
-    color: black;
-    background: transparent;
-    border-radius: 6px;
-    border: none;
-    border: 1px solid black;
-    margin:30px;
-    margin-top:0px
+    margin-top: 35px;
+    margin-bottom: 33px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: whitesmoke;
+    color: gray;
+    margin-left: 2px;
 }
 .btn:hover {
     background-color: black;

@@ -5,6 +5,7 @@ import Landing from './components/landing.jsx';
 import NavigationBar from './components/navigationBar.jsx';
 import Home from './components/home.jsx';
 import AddActivity from './components/addActivity.jsx';
+import Country from './components/country.jsx';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       </Route>
       <Route exact path = '/AddActivity'>
         <AddActivity />
+      </Route>
+      <Route exact path = '/country/:code'
+        render = {({match}) => <Country id={match.params.code}/>}>
       </Route>
     </Router>
   );

@@ -1,13 +1,25 @@
 .etq {
     display: flex;
-    
+    align-items: center;
     margin: 2px 3px;
     padding: 2px;
-    border: solid 1px black;
-    border-radius: 5px;
+    border: solid 1px gray;
+    border-radius: 15px;
+    color:gray;
+    height: 15px;
+}
+.country{
+    margin-left: 5px;
 }
 .x{
     display: flex;
-    margin-left: 3px;
-    border: solid 1px black;
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background: url('./eliminar.png');
+    background-size: cover;
+    display: table;
 }
