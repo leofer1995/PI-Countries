@@ -1,3 +1,6 @@
+<div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="juniordevelopment" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/juniordevelopment?trk=profile-badge">Leonardo Fernández Segura</a></div>
+              
+
 <p align='left'>
     <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
